@@ -1,0 +1,10 @@
+#container{
+    display:flex;
+    justify-content: flex-start;
+    align-items:flex-start;
+    }
+
+.contents{
+display: inline-block;
+margin-right: 100px;
+}
