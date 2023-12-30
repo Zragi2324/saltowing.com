@@ -5,6 +5,33 @@
     }
 
 .contents{
-display: inline-block;
-margin-right: 100px;
+    
+    visibility: hidden;
+    height: 0;
 }
+
+.home-content,.about-content,.contact-content{
+
+    margin-right: 100px;
+}
+.show-contents{
+display: flex;
+height: auto;
+visibility: visible;
+}
+
+.footer-container{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.hearFromYou{
+    text-align: center;
+    
+}
+
+
+

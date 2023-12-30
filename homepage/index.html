@@ -19,11 +19,15 @@
         <div id="container">
 
             <div id="menu">
-                <button>Menu</button> <br>
+                <button id="menuBtn" onclick="displayMenu()">Menu</button> <br>
+                <div class="contents">
+
+                    <h4 class="home-content">Home</h4>
+                    <h4 class="about-content">About</h4>
+                    <h4 class="contact-content">Contact</h4>
+
+                </div>
                 
-                <h4 class="contents">Home</h4>
-                <h4 class="contents">About</h4>
-                <h4 class="contents">Contact</h4>
             </div>
 
         </div>
@@ -68,6 +72,7 @@
                     <li> Dearborn</LI>
                     <li>Hamtramck</li>
                 </ul>
+            
     
             </div>
     
@@ -75,14 +80,35 @@
 
     </main>
     <footer>
-        <h3>We Would Love to hear from you, Give us a call!</h3>
-        <h4>Hours of operation:</h4>
-        <h5>24/7</h5>
-        <h3> Telephone </h3>
-        <h4>(313)800-3444</h4>
-        <h3>Email:</h3>
-        <h4>saltowingllc@gmail.com</h3>
+
+        <h3 class="hearFromYou">We Would Love to hear from you, Give us a call!</h3>
+        <div class="footer-container">
+            
+            <h4 class="hrsOperating">Hours of operation:</h4>
+            <h5 class="operating">24/7</h5>
+            <h3 class="telephone"> Telephone </h3>
+            <h4 class="phoneNum">(313)800-3444</h4>
+            <h3 class="emailTxt">Email:</h3>
+            <h4 class="email">saltowingllc@gmail.com</h3>
+        </div>
 
     </footer>
+    <script>
+
+        
+        const menuBtn = document.querySelector("#menu");
+        const menuContents = document.querySelector(".contents");
+        // When the buttn is clicked set to hidden
+        let contentIsVisible = false;
+        function displayMenu(){
+            if(contentIsVisible ==false){
+                menuContents.classList.add("show-contents");
+                contentIsVisible = true;
+            }else{
+                menuContents.classList.remove("show-contents");
+                contentIsVisible = false;
+            }
+        }
+    </script>
 </body>
 </html>
